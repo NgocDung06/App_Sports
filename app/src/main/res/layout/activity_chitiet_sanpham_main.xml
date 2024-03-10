@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".main.Chitiet_SanphamMainActivity"
+    android:padding="10dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/framechitiet"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="10dp"
+        android:isCredential="true">
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chitietIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="6dp"
+                android:button="@drawable/custtom_checkbox_chitiet" />
+
+            <ImageView
+                android:id="@+id/imgchitietHinhsanpham"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/aodabong_arsenal" />
+
+            <TextView
+                android:id="@+id/tvchitietTensanpham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgchitietHinhsanpham"
+                android:text="Áo bóng đá"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/tvchitietGiasanpham"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvchitietTensanpham"
+                android:text="100000"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/holo_red_light"/>
+
+            <TextView
+                android:id="@+id/tvchitietMota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvchitietGiasanpham"
+                android:layout_marginTop="15dp"
+                android:text="Mô tả"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnchitietGiohang"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvchitietMota"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:drawableStart="@drawable/baseline_shopping_cart_24"
+                android:layout_toRightOf="@id/tvchitietGiasanpham"
+                android:background="@drawable/custtom_mua"
+                android:text="Thêm vào giỏ hàng"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnchitietMua"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvchitietMota"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/btnchitietGiohang"
+                android:background="@drawable/mua"
+                android:text="Mua"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

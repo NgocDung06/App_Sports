@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.Login_Activity"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@drawable/custom_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SportClothes"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/bluedam"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_signup"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:hint="input your email"
+            android:padding="10dp"
+            android:drawableTint="@color/grey"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_signup"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/grey"
+            android:hint="input your email"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnManhinhlogin"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="LOGIN"
+            android:background="@drawable/custom_signip"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvhave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"/>
+            <TextView
+                android:id="@+id/tvSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:layout_toRightOf="@id/tvhave"
+                android:textColor="@color/bluedam"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

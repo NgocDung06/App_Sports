@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ViewFlipper
+                android:id="@+id/viewflipper"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chủ đề"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/bluedam"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChude"
+                android:layout_width="match_parent"
+                android:layout_height="135dp" />
+            <TextView
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thể loại"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/bluedam"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTheloai"
+                android:layout_width="match_parent"
+                android:layout_height="270dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sản phẩm bán chạy"
+                android:textSize="20dp"
+                android:textColor="@color/bluedam"
+                android:textStyle="bold"
+                android:background="@color/a5"
+                android:padding="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSanphambanchay"
+                android:layout_width="match_parent"
+                android:layout_height="600dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
