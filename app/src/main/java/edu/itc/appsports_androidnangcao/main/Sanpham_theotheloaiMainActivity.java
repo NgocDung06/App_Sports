@@ -140,5 +140,8 @@ public class Sanpham_theotheloaiMainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(stringRequest);
     }
+    public void setsoluong(){
+
+    }
 
 }

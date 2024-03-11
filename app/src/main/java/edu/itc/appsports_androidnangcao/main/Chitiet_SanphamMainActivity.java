@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.squareup.picasso.Picasso;
 
 import java.util.Locale;
@@ -24,6 +25,8 @@ public class Chitiet_SanphamMainActivity extends AppCompatActivity {
     ImageView imgchitietHinhsanpham;
     TextView tvchitietTensanpham, tvcvhitietGiasanpham, tvchitietMota;
     AppCompatButton btnchitietGiohang, btnchitietMua;
+
+    MaterialToolbar materialToolbarChitietsanpham;
     private SANPHAM sanpham;
 
     @Override
@@ -40,11 +43,13 @@ public class Chitiet_SanphamMainActivity extends AppCompatActivity {
         tvcvhitietGiasanpham.setText(sanpham.dongia);
         tvchitietMota.setText(sanpham.mota);
 
+        getSupportActionBar(materialToolbarChitietsanpham);
+
         String dongia = NumberFormat.getNumberInstance(Locale.getDefault()).format(Double.parseDouble(sanpham.dongia));
         tvcvhitietGiasanpham.setText(dongia);
 
 
-        btnchitietMua.setOnClickListener(new View.OnClickListener() {
+        btnchitietGiohang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Tạo Bundle để truyền dữ liệu
@@ -66,6 +71,17 @@ public class Chitiet_SanphamMainActivity extends AppCompatActivity {
         });
 
     }
+
+    private void getSupportActionBar(MaterialToolbar materialToolbarChitietsanpham) {
+        materialToolbarChitietsanpham.setNavigationIcon(R.drawable.baseline_arrow_back_2444);
+        materialToolbarChitietsanpham.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
     private void anhxa() {
         imgchitietHinhsanpham = findViewById(R.id.imgchitietHinhsanpham);
         tvchitietTensanpham = findViewById(R.id.tvchitietTensanpham);
@@ -73,5 +89,6 @@ public class Chitiet_SanphamMainActivity extends AppCompatActivity {
         tvchitietMota = findViewById(R.id.tvchitietMota);
         btnchitietGiohang = findViewById(R.id.btnchitietGiohang);
         btnchitietMua = findViewById(R.id.btnchitietMua);
+        materialToolbarChitietsanpham = findViewById(R.id.MatreriatoolbarCgitietsanpham);
     }
 }

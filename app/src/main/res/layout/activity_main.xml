@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.MainActivity"
-    android:id="@+id/drawerLayout">
+    android:id="@+id/drawerLayout"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,8 +34,8 @@
             android:id="@+id/framemain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/toolbar"
-            ></FrameLayout>
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"></FrameLayout>
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"

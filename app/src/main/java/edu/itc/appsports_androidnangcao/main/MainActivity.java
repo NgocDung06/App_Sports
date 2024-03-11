@@ -18,6 +18,7 @@ import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import edu.itc.appsports_androidnangcao.Fragment.Fragment_Canhan;
 import edu.itc.appsports_androidnangcao.Fragment.Fragment_Home;
 import edu.itc.appsports_androidnangcao.Fragment.Fragment_giohang;
 import edu.itc.appsports_androidnangcao.R;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment currentfragment;
     Fragment_Home fragment_home = new Fragment_Home();
     Fragment_giohang fragment_giohang = new Fragment_giohang();
+    Fragment_Canhan fragment_canhan = new Fragment_Canhan();
     BadgeDrawable badgeHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         currentfragment = fragment_giohang;
                         break;
                     case R.id.mnuAccount:
-                        Toast.makeText(MainActivity.this, "Cá nhân", Toast.LENGTH_SHORT).show();
+                        currentfragment = fragment_canhan;
                         break;
                 }
                 Loadfragment(currentfragment);

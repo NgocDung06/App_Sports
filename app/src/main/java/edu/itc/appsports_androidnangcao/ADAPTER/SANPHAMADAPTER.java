@@ -21,6 +21,7 @@ import java.util.Locale;
 import edu.itc.appsports_androidnangcao.MODEL.SANPHAM;
 import edu.itc.appsports_androidnangcao.R;
 import edu.itc.appsports_androidnangcao.main.Chitiet_SanphamMainActivity;
+import edu.itc.appsports_androidnangcao.main.Sanpham_theotheloaiMainActivity;
 import edu.itc.appsports_androidnangcao.server.SERVER;
 
 public class SANPHAMADAPTER extends RecyclerView.Adapter<SANPHAMADAPTER.SANPHAMVIEWHODER> {
@@ -42,14 +43,13 @@ public class SANPHAMADAPTER extends RecyclerView.Adapter<SANPHAMADAPTER.SANPHAMV
     @Override
     public void onBindViewHolder(@NonNull SANPHAMVIEWHODER holder, int position) {
         SANPHAM sanpham = data.get(position);
+        Picasso.get().load(SERVER.pathImages+sanpham.hinhsanpham).into(holder.imghinhSanpham);
         String tensanpham = sanpham.tensanpham;
         if (tensanpham.length()>11)
             tensanpham = tensanpham.substring(0,11)+"...";
         holder.tvtenSanpham.setText(tensanpham);
 
         String dongia = NumberFormat.getNumberInstance(Locale.getDefault()).format(Double.parseDouble(sanpham.dongia));
-
-        Picasso.get().load(SERVER.pathImages+sanpham.hinhsanpham).into(holder.imghinhSanpham);
         holder.tvgiaSanpham.setText(dongia);
 
         holder.imghinhSanpham.setOnClickListener(new View.OnClickListener() {

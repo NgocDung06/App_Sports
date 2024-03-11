@@ -5,11 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".main.Chitiet_SanphamMainActivity"
-    android:padding="10dp">
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/MatreriatoolbarCgitietsanpham"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/a5"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/framechitiet"/>
+        android:id="@+id/framechitiet"
+        android:layout_marginTop="50dp">
+
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -79,11 +89,12 @@
                 android:layout_marginTop="5dp"
                 android:padding="10dp"
                 android:drawableStart="@drawable/baseline_shopping_cart_24"
-                android:layout_toRightOf="@id/tvchitietGiasanpham"
+                android:layout_toRightOf="@id/chat"
                 android:background="@drawable/custtom_mua"
                 android:text="Thêm vào giỏ hàng"
                 android:textColor="@color/white"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="5dp"
+
                 />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -96,12 +107,25 @@
                 android:background="@drawable/mua"
                 android:text="Mua"
                 android:textColor="@color/white"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="5dp"
                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:layout_below="@id/tvchitietMota"
+                android:background="@drawable/custtom_mua"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/baseline_chat_24"
+                android:padding="10dp"/>
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
 
 

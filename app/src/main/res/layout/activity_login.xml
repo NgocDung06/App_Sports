@@ -68,7 +68,8 @@
             android:drawablePadding="10dp"
             android:drawableTint="@color/grey"
             android:hint="input your email"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:inputType="textPassword"/>
 
         <TextView
             android:layout_width="wrap_content"
