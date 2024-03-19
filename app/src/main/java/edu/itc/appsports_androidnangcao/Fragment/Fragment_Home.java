@@ -83,6 +83,7 @@ public class Fragment_Home extends Fragment {
     }
 
     private void loadsanpham() {
+        sanpham_data.clear();
         Response.Listener<JSONArray> thanhcong = new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -120,6 +121,7 @@ public class Fragment_Home extends Fragment {
     }
 
     private void loadtheloai() {
+        theloai_data.clear();
         Response.Listener<JSONArray> thanhcong = new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -197,6 +199,7 @@ public class Fragment_Home extends Fragment {
     }
 
     private void loadchude() {
+        chude_data.clear();
         Response.Listener<JSONArray> thanhcong = new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {

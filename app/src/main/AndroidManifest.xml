@@ -16,6 +16,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".main.Splash_Activity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".main.ChitietGiohangActivity"
             android:exported="false" />
         <activity
@@ -26,33 +35,24 @@
             android:exported="false" />
         <activity
             android:name=".main.Accoun_Activity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".main.Giohang_Activity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".main.Giohang_MainActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".main.Giohang_MainActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".main.Chitiet_SanphamMainActivity"
             android:exported="false" />
         <activity
             android:name=".main.Sanpham_theotheloaiMainActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".main.SanphamtheotheloaiMainActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".main.SanphamtheotheloaiMainActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".main.MainActivity"
             android:exported="true">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

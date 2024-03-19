@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        clearFragmentHome();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -66,10 +65,6 @@ public class MainActivity extends AppCompatActivity {
         });
         Loadfragment(fragment_home);
         LoadbadgeHome();
-    }
-
-    private void clearFragmentHome() {
-        getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
     private void LoadbadgeHome() {
